@@ -1,0 +1,40 @@
+html {
+  font-family: "Limelight";
+}
+
+body {
+  background-color: #fffff0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(121, 50, 61);
+  margin: 0;
+  padding: 10px;
+  color: #fffff0;
+  height: 3vh;
+}
+
+#insta_logo {
+  stroke: #fffff0;
+}
+
+.nav-item:hover {
+  background-color: #fffff0;
+  color: rgb(121, 50, 61);
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+}
+
+#fleurs_logo {
+  width: 300px;
+  margin: 8px auto;
+  display: block;
+}
