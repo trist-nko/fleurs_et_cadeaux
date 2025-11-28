@@ -17,6 +17,8 @@ ul {
   padding: 10px;
   color: #fffff0;
   height: 3vh;
+  font-size: 1rem;
+  font-size: clamp(1rem, -2.5rem + 8vw, 1.8rem);
 }
 
 p {
@@ -60,10 +62,26 @@ p {
   color: rgb(170, 24, 46);
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #rotate_bowl {
   width: 60vw;
   display: block;
-  margin-right: -55vw;
+  margin-right: -40vw;
+  /* We don't need 'transition' here for infinite animation */
+}
+
+/* 2. Apply the animation on hover */
+#rotate_bowl:hover {
+  /* '2s' is the speed of one full rotation. 'linear' makes it consistent speed. */
+  animation: spin 0.5s linear infinite;
 }
 
 #fleurs_logo {
@@ -126,6 +144,31 @@ p {
   text-decoration: underline;
 }
 
-#bowl_sashimi {
-  display: block;
+.big-bowl {
+  z-index: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.big-bowl img {
+  object-fit: cover;
+}
+
+.storefront {
+  box-sizing: border-box;
+  z-index: -1;
+  transform: translateY(-55vh);
+  margin: 0 auto;
+}
+
+#streetview {
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+footer {
+  text-align: center;
+  color: red;
+  transform: translateY(-30vh);
 }
